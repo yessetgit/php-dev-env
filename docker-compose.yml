@@ -2,6 +2,7 @@ version: '3.5'
 services:
 
   webserver:
+    container_name: webserver
     image: phpstorm/php-71-apache-xdebug
     restart: always
     ports:

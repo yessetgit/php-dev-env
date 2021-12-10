@@ -1,0 +1,1 @@
+RUN systemctl status apache2
