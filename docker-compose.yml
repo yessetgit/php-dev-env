@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+
+  webserver:
+    image: phpstorm/php-71-apache-xdebug
+    restart: always
+    ports:
+      - "6080:80"
+    volumes:
+      - ./html:/var/www/html
+    environment:
+      PHP_IDE_CONFIG: serverName=bylgen
+      XDEBUG_CONFIG: remote_host=172.17.0.1 idekey=PHPSTORM remote_autostart=0 remote_enable=true max_nestling_level=700 profiler_enable=0
